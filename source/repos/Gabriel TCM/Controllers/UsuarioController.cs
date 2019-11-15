@@ -54,6 +54,10 @@ namespace Gabriel_TCM.Controllers
             var todosSeguros = metodosusuario.ListarSeguros(seg);
             return View(todosSeguros);
         }
+        public ActionResult Planos()
+        {
+            return View();
+        }
         public ActionResult InformacoesDoCartao()
         {
             return View();
@@ -69,21 +73,21 @@ namespace Gabriel_TCM.Controllers
             }
             return View(produto);
         }
-        public ActionResult AgendarContato()
-        {
-            return View();
-        }
-        [HttpPost]
-        public ActionResult AgendarContato(Agendamento agendamento)
-        {
-            if (ModelState.IsValid)
-            {
-                var metodosUsuario = new Cadastrar();
-                metodosUsuario.InsereDadosParaAgendamento(agendamento);
-                return RedirectToAction("Index", "Usuario");
-            }
-            return View(agendamento);
-        }
+        //public ActionResult AgendarContato()
+        //{
+        //    return View();
+        //}
+        //[HttpPost]
+        //public ActionResult AgendarContato(Agendamento agendamento)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var metodosUsuario = new Cadastrar();
+        //        metodosUsuario.InsereDadosParaAgendamento(agendamento);
+        //        return RedirectToAction("Index", "Usuario");
+        //    }
+        //    return View(agendamento);
+        //}
 
     }
 }

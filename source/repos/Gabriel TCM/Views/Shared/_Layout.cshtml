@@ -6,6 +6,8 @@
     <meta name="viewport" content="width:device-width, initial-scale=1">
     <link rel="stylesheet" href="~/Content/Site.css" />
     <link href="~/Content/StyleSheet1.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bootstrap/css")
@@ -64,6 +66,7 @@
                             <li>@Html.ActionLink("Início", "Index", "Home")</li>
                             <li>@Html.ActionLink("Cadastrar", "Cadastrar", "Usuario")</li>
                             <li>@Html.ActionLink("Produtos", "Produtos", "Usuario")</li>
+                            <li>@Html.ActionLink("Planos", "Planos", "Usuario")</li>
                             <li>@Html.ActionLink("Login","Login","Home")</li>
                             <li class="search">
                                 <div class="input-group">

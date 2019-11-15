@@ -10,7 +10,7 @@ namespace Regra_de_Negocios.Entity
     {
         public int idpac { get; set; }
         public string tipopac { get; set; }
-        public decimal valor { get; set; }
+        public string valor { get; set; }
         public string destino { get; set; }
 
     }

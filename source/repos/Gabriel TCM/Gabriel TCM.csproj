@@ -399,6 +399,7 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Usuario\Pacotes.cshtml" />
     <Content Include="Views\Usuario\Seguros.cshtml" />
+    <Content Include="Views\Usuario\Planos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
