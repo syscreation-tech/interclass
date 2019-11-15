@@ -1,0 +1,16 @@
+﻿ul , ol{
+    margin-top: 400px;
+    margin-bottom : 10px;
+}
+
+*{ 
+    box-sizing:inherit;
+
+}
+
+#banner h1{
+    position: absolute;
+}
+*row{ 
+    box-sizing:border-box;
+}

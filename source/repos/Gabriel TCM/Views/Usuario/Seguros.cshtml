@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Regra_de_Negocios.Entity.Seguros>
+
+@{
+    ViewBag.Title = "Seguros";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Seguros</h2>
+
+<div>
+    @foreach (var seguros in Model)
+    {
+        <p>Os tipos de seguros são: @Html.DisplayFor(modelItem => seguros.tiposeg)</p>
+        <p>O Valor: @Html.DisplayFor(modelItem => seguros.valorseg)</p>
+    }
+</div>

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Regra_de_Negocios.Entity.Produto>
+
+@{
+    ViewBag.Title = "Cartao";
+    Layout = "~/Views/Shared/_usuarioLayout.cshtml";
+}
+
+<h2>Cartao</h2>
+
+<p>
+    @Html.ActionLink("Voltar Para o Inicio", "Index")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NumCartao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodCardSegu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeProp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataValid)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumCartao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodCardSegu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeProp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataValid)
+        </td>
+
+    </tr>
+}
+
+</table>

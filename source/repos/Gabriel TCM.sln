@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gabriel TCM", "Gabriel TCM\Gabriel TCM.csproj", "{94BBE8C7-581C-4B1E-8C5D-249A676B5979}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Regra de Negocios", "..\Regra de Negocios\Regra de Negocios.csproj", "{DC84DFBE-600E-4C12-AA52-AFB47E37C2CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94BBE8C7-581C-4B1E-8C5D-249A676B5979}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94BBE8C7-581C-4B1E-8C5D-249A676B5979}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94BBE8C7-581C-4B1E-8C5D-249A676B5979}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94BBE8C7-581C-4B1E-8C5D-249A676B5979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC84DFBE-600E-4C12-AA52-AFB47E37C2CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC84DFBE-600E-4C12-AA52-AFB47E37C2CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC84DFBE-600E-4C12-AA52-AFB47E37C2CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC84DFBE-600E-4C12-AA52-AFB47E37C2CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {39D651FA-08F7-4232-A54C-162DA0A70876}
+	EndGlobalSection
+EndGlobal

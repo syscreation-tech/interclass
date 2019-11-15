@@ -1,0 +1,141 @@
+﻿@model Regra_de_Negocios.Entity.USUARIO
+@{
+    ViewBag.Title = "Home Page";
+}
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link href="~/Content/bootstrap.min.css" rel="stylesheet">
+<link href="~/Content/ie10-viewport-bug-workaround.css" rel="stylesheet">
+<link href="~/Content/sticky-footer-navbar.css" rel="stylesheet">
+<script src="~/js/ie-emulation-modes-warning.js"></script>
+<div>
+    <a href="http://localhost:49300/Login.aspx">Efetue o login Aqui!!</a>
+</div>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+
+<h2>
+    <img src="~/img/seta1.png" />CONFIRA AS OPÇÕES EM DESTAQUE!!
+</h2>
+
+<div class="teste4">
+    <a id="foto1" href="~/Views/Home/Index.cshtml" target="_self">
+        <img src="~/img/oi.png" />
+    </a>
+</div>
+<div class="teste3">
+    @*férias*@
+    <a id="foto2" href="/Home/Ferias" target="_self">
+        <img src="~/img/ferias.png" alt="Bold" />
+    </a>
+</div>
+<div class="teste">
+    @*high school canada*@
+    <a id="foto3" href="/Home/Canada" target="_self">
+        <img src="~/img/high school.png" alt="Bold" />
+    </a>
+</div>
+<div class="teste2">
+    @*bus*@
+    <a id="foto4" href="/Home/EUA" target="_self">
+        <img src="~/img/high.png" alt="Bold" />
+    </a>
+</div>
+<div class="teste1">
+    @*Dublin*@
+    <a id="foto5" href="~/Views/Home/Index.cshtml" target="_self">
+        <img src="~/img/irlanda.png" alt="Bold" />
+    </a>
+</div>
+<section>
+    <h2>
+        <img src="~/img/seta1.png" />PRINCIPAIS LUGARES PARA O SEU INTERCAMBIO!!
+    </h2>
+    <br />
+    <br />
+    <div class="w3-content w3-display-container">
+
+        <div class="w3-display-container mySlides">
+            <img src="~/img/inglaterra2.png" style="width:300px; height:200px;">
+            <img src="~/img/inglaterra.png" style="width:300px; height:200px;">
+            <img src="~/img/inglaterra1.png" style="width:300px; height:200px;">
+
+            <div class="w3-display-bottomright w3-large w3-container w3-padding-3 w3-black">
+                INGLATERRA!!
+            </div>
+        </div>
+        <div class="w3-display-container mySlides">
+            <img src="~/img/canada.png" style="width:300px; height:200px;" />
+            <img src="~/img/canada1.png" style="width:300px; height:200px;" />
+            <img src="~/img/canada2.png" style="width:300px; height:200px;" />
+            <div class="w3-display-bottomright w3-large w3-container w3-padding-3 w3-black">
+                CANADÁ!!
+            </div>
+        </div>
+        <div class="w3-display-container mySlides">
+            <img src="~/img/irlanda1.png" style="width:300px; height:200px;" />
+            <img src="~/img/irlanda2.png" style="width:300px; height:200px;" />
+            <img src="~/img/irlanda3.png" style="width:300px; height:200px;" />
+            <div class="w3-display-bottomright w3-large w3-container w3-padding-3 w3-black">
+                IRLANDA!!
+            </div>
+        </div>
+
+        <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-display-right w3-black" onclick="plusDivs(+1)">&#10095;</button>
+
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+    <div>
+        <img src="img/linha.png" style="width:910px;height:10px;" />
+    </div>
+</section>
+<div class="container distancia_menu">
+
+    <div class="row container_form_contato">
+        <div class="col-md-3">
+            <style>
+                h3 {
+                    text-align: center;
+                }
+            </style><h3> que você precisa?</h3>
+        </div>
+        <div class="col-md-9">
+            <form method="post">
+                <input type="text" name="nome" placeholder="Nome" />
+                <input type="email" name="email" placeholder="Email" />
+                <input type="text" name="assunto" placeholder="Assunto" />
+                <br />
+                <textarea name="mensagem" placeholder="Mensagem"></textarea>
+                <br />
+                <input type="submit" value="Enviar Mensagem" />
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="~/js/bootstrap.min.js"></script>
+<script src="~/js/ie10-viewport-bug-workaround.js"></script>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap") 

@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Regra_de_Negocios.Entity.USUARIO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Verificar Compras realizadas no Cartão", "Cartao")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.USUARIO_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOME_USUARIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOGIN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SENHA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMAIL)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var usuario in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => usuario.USUARIO_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => usuario.NOME_USUARIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => usuario.LOGIN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => usuario.SENHA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => usuario.EMAIL)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Alterar", new { usuario.USUARIO_ID, usuario.NOME_USUARIO, usuario.LOGIN, usuario.SENHA, usuario.EMAIL }) |
+            @Html.ActionLink("Deletar", "Deleta", new { usuario.USUARIO_ID, usuario.NOME_USUARIO, usuario.LOGIN, usuario.SENHA, usuario.EMAIL }) |
+        </td>   
+    </tr>
+}
+
+</table>

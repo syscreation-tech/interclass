@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{94BBE8C7-581C-4B1E-8C5D-249A676B5979}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gabriel_TCM</RootNamespace>
+    <AssemblyName>Gabriel TCM</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mensagem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap1.min.css" />
+    <Content Include="Content\ie10-viewport-bug-workaround.css" />
+    <Content Include="Content\sticky-footer-navbar.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\StyleSheet1.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="img\Australia.PNG" />
+    <Content Include="img\banner2.jpg" />
+    <Content Include="img\canada.PNG" />
+    <Content Include="img\canada1.PNG" />
+    <Content Include="img\canada2.PNG" />
+    <Content Include="img\crianca.jpeg" />
+    <Content Include="img\eua.PNG" />
+    <Content Include="img\ferias.png" />
+    <Content Include="img\header1.jpg" />
+    <Content Include="img\high school.png" />
+    <Content Include="img\high.png" />
+    <Content Include="img\inglaterra.PNG" />
+    <Content Include="img\inglaterra1.PNG" />
+    <Content Include="img\inglaterra2.PNG" />
+    <Content Include="img\irlanda.PNG" />
+    <Content Include="img\irlanda1.PNG" />
+    <Content Include="img\irlanda2.PNG" />
+    <Content Include="img\irlanda3.PNG" />
+    <Content Include="img\linha.png" />
+    <Content Include="img\oi.png" />
+    <Content Include="img\oi1.PNG" />
+    <Content Include="img\oi2.PNG" />
+    <Content Include="img\oi3.png" />
+    <Content Include="img\prod5.PNG" />
+    <Content Include="img\seta.png" />
+    <Content Include="img\teste.png" />
+    <Content Include="img\titulo3.png" />
+    <Content Include="img\zelandia.PNG" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\efeitos.js" />
+    <Content Include="js\ie-emulation-modes-warning.js" />
+    <Content Include="js\ie10-viewport-bug-workaround.js" />
+    <Content Include="js\ie8-responsive-file-warning.js" />
+    <Content Include="js\npm.js" />
+    <Content Include="js\SmoothScroll.js" />
+    <Content Include="js\theme-scripts.js" />
+    <Content Include="lib\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="lib\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="lib\bootstrap\css\bootstrap.css" />
+    <Content Include="lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="lib\bootstrap\js\bootstrap.js" />
+    <Content Include="lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="lib\bootstrap\js\npm.js" />
+    <Content Include="lib\jquery\jquery.min.js" />
+    <Content Include="lib\owl.carousel\assets\css\bootstrapTheme.css" />
+    <Content Include="lib\owl.carousel\assets\css\custom.css" />
+    <Content Include="lib\owl.carousel\assets\css\responsive.css" />
+    <Content Include="lib\owl.carousel\assets\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="lib\owl.carousel\assets\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="lib\owl.carousel\assets\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="lib\owl.carousel\assets\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="lib\owl.carousel\assets\ico\favicon.png" />
+    <Content Include="lib\owl.carousel\assets\img\AjaxLoader.gif" />
+    <Content Include="lib\owl.carousel\assets\img\demo-slides\controls.png" />
+    <Content Include="lib\owl.carousel\assets\img\demo-slides\css3.png" />
+    <Content Include="lib\owl.carousel\assets\img\demo-slides\feather.png" />
+    <Content Include="lib\owl.carousel\assets\img\demo-slides\grab.png" />
+    <Content Include="lib\owl.carousel\assets\img\demo-slides\modern.png" />
+    <Content Include="lib\owl.carousel\assets\img\demo-slides\multi.png" />
+    <Content Include="lib\owl.carousel\assets\img\demo-slides\responsive.png" />
+    <Content Include="lib\owl.carousel\assets\img\demo-slides\tons.png" />
+    <Content Include="lib\owl.carousel\assets\img\demo-slides\touch.png" />
+    <Content Include="lib\owl.carousel\assets\img\demo-slides\zombie.png" />
+    <Content Include="lib\owl.carousel\assets\img\glyphicons-halflings-green.png" />
+    <Content Include="lib\owl.carousel\assets\img\glyphicons-halflings-white.png" />
+    <Content Include="lib\owl.carousel\assets\img\glyphicons-halflings.png" />
+    <Content Include="lib\owl.carousel\assets\img\owl-logo.png" />
+    <Content Include="lib\owl.carousel\assets\js\application.js" />
+    <Content Include="lib\owl.carousel\assets\js\bootstrap-collapse.js" />
+    <Content Include="lib\owl.carousel\assets\js\bootstrap-tab.js" />
+    <Content Include="lib\owl.carousel\assets\js\bootstrap-transition.js" />
+    <Content Include="lib\owl.carousel\assets\js\google-code-prettify\prettify.css" />
+    <Content Include="lib\owl.carousel\assets\js\google-code-prettify\prettify.js" />
+    <Content Include="lib\owl.carousel\assets\js\google-code-prettify\run_prettify.js" />
+    <Content Include="lib\owl.carousel\assets\js\jquery-1.9.1.min.js" />
+    <Content Include="lib\owl.carousel\changelog.html" />
+    <Content Include="lib\owl.carousel\demos\assets\fullimage1.jpg" />
+    <Content Include="lib\owl.carousel\demos\assets\fullimage2.jpg" />
+    <Content Include="lib\owl.carousel\demos\assets\fullimage3.jpg" />
+    <Content Include="lib\owl.carousel\demos\assets\fullimage4.jpg" />
+    <Content Include="lib\owl.carousel\demos\assets\fullimage5.jpg" />
+    <Content Include="lib\owl.carousel\demos\assets\fullimage6.jpg" />
+    <Content Include="lib\owl.carousel\demos\assets\fullimage7.jpg" />
+    <Content Include="lib\owl.carousel\demos\assets\owl1.jpg" />
+    <Content Include="lib\owl.carousel\demos\assets\owl2.jpg" />
+    <Content Include="lib\owl.carousel\demos\assets\owl3.jpg" />
+    <Content Include="lib\owl.carousel\demos\assets\owl4.jpg" />
+    <Content Include="lib\owl.carousel\demos\assets\owl5.jpg" />
+    <Content Include="lib\owl.carousel\demos\assets\owl6.jpg" />
+    <Content Include="lib\owl.carousel\demos\assets\owl7.jpg" />
+    <Content Include="lib\owl.carousel\demos\assets\owl8.jpg" />
+    <Content Include="lib\owl.carousel\demos\autoHeight.html" />
+    <Content Include="lib\owl.carousel\demos\click.html" />
+    <Content Include="lib\owl.carousel\demos\custom.html" />
+    <Content Include="lib\owl.carousel\demos\customJson.html" />
+    <Content Include="lib\owl.carousel\demos\full.html" />
+    <Content Include="lib\owl.carousel\demos\images.html" />
+    <Content Include="lib\owl.carousel\demos\itemsCustom.html" />
+    <Content Include="lib\owl.carousel\demos\json.html" />
+    <Content Include="lib\owl.carousel\demos\lazyLoad.html" />
+    <Content Include="lib\owl.carousel\demos\manipulations.html" />
+    <Content Include="lib\owl.carousel\demos\navOnTop.html" />
+    <Content Include="lib\owl.carousel\demos\navOnTop2.html" />
+    <Content Include="lib\owl.carousel\demos\one.html" />
+    <Content Include="lib\owl.carousel\demos\owlStatus.html" />
+    <Content Include="lib\owl.carousel\demos\progressBar.html" />
+    <Content Include="lib\owl.carousel\demos\randomOrder.html" />
+    <Content Include="lib\owl.carousel\demos\scaleup.html" />
+    <Content Include="lib\owl.carousel\demos\sync.html" />
+    <Content Include="lib\owl.carousel\demos\transitions.html" />
+    <Content Include="lib\owl.carousel\index.html" />
+    <Content Include="lib\owl.carousel\owl-carousel\AjaxLoader.gif" />
+    <Content Include="lib\owl.carousel\owl-carousel\grabbing.png" />
+    <Content Include="lib\owl.carousel\owl-carousel\owl.carousel.css" />
+    <Content Include="lib\owl.carousel\owl-carousel\owl.carousel.js" />
+    <Content Include="lib\owl.carousel\owl-carousel\owl.carousel.min.js" />
+    <Content Include="lib\owl.carousel\owl-carousel\owl.theme.css" />
+    <Content Include="lib\owl.carousel\owl-carousel\owl.transitions.css" />
+    <Content Include="lib\plyr\.gitignore" />
+    <Content Include="lib\plyr\dist\plyr.css" />
+    <Content Include="lib\plyr\dist\plyr.js" />
+    <Content Include="lib\plyr\docs\dist\docs.css" />
+    <Content Include="lib\plyr\docs\dist\docs.js" />
+    <Content Include="lib\plyr\docs\error.html" />
+    <Content Include="lib\plyr\docs\index.html" />
+    <Content Include="lib\plyr\docs\index.master.html" />
+    <Content Include="lib\plyr\docs\poster.jpg" />
+    <Content Include="lib\plyr\docs\src\js\docs.js" />
+    <Content Include="lib\plyr\docs\src\js\lib\classlist.js" />
+    <Content Include="lib\plyr\gulpfile.js" />
+    <Content Include="lib\plyr\src\js\plyr.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Admin.aspx" />
+    <Content Include="lib\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="lib\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="lib\bootstrap\css\bootstrap.css.map" />
+    <Content Include="lib\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="lib\owl.carousel\demos\json\customData.json" />
+    <Content Include="lib\owl.carousel\demos\json\data.json" />
+    <Content Include="lib\owl.carousel\LICENSE" />
+    <Content Include="lib\owl.carousel\README.md" />
+    <Content Include="lib\plyr\.jshintignore" />
+    <Content Include="lib\plyr\.jshintrc" />
+    <Content Include="lib\plyr\bower.json" />
+    <Content Include="lib\plyr\bundles.json" />
+    <Content Include="lib\plyr\changelog.md" />
+    <Content Include="lib\plyr\controls.md" />
+    <Content Include="lib\plyr\dist\sprite.svg" />
+    <Content Include="lib\plyr\docs\src\less\components\base.less" />
+    <Content Include="lib\plyr\docs\src\less\components\buttons.less" />
+    <Content Include="lib\plyr\docs\src\less\components\error.less" />
+    <Content Include="lib\plyr\docs\src\less\components\examples.less" />
+    <Content Include="lib\plyr\docs\src\less\components\icons.less" />
+    <Content Include="lib\plyr\docs\src\less\components\panels.less" />
+    <Content Include="lib\plyr\docs\src\less\components\type.less" />
+    <Content Include="lib\plyr\docs\src\less\docs.less" />
+    <Content Include="lib\plyr\docs\src\less\lib\animation.less" />
+    <Content Include="lib\plyr\docs\src\less\lib\fontface.less" />
+    <Content Include="lib\plyr\docs\src\less\lib\mixins.less" />
+    <Content Include="lib\plyr\docs\src\less\lib\normalize.less" />
+    <Content Include="lib\plyr\docs\src\less\variables.less" />
+    <Content Include="lib\plyr\license.md" />
+    <Content Include="lib\plyr\package.json" />
+    <Content Include="lib\plyr\readme.md" />
+    <Content Include="lib\plyr\src\less\plyr.less" />
+    <Content Include="lib\plyr\src\sass\plyr.scss" />
+    <Content Include="lib\plyr\src\sprite\icon-captions-off.svg" />
+    <Content Include="lib\plyr\src\sprite\icon-captions-on.svg" />
+    <Content Include="lib\plyr\src\sprite\icon-enter-fullscreen.svg" />
+    <Content Include="lib\plyr\src\sprite\icon-exit-fullscreen.svg" />
+    <Content Include="lib\plyr\src\sprite\icon-fast-forward.svg" />
+    <Content Include="lib\plyr\src\sprite\icon-muted.svg" />
+    <Content Include="lib\plyr\src\sprite\icon-pause.svg" />
+    <Content Include="lib\plyr\src\sprite\icon-play.svg" />
+    <Content Include="lib\plyr\src\sprite\icon-restart.svg" />
+    <Content Include="lib\plyr\src\sprite\icon-rewind.svg" />
+    <Content Include="lib\plyr\src\sprite\icon-volume.svg" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Usuario\Cadastrar.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Deleta.cshtml" />
+    <Content Include="Views\Admin\Alterar.cshtml" />
+    <Content Include="Views\Home\Ferias.cshtml" />
+    <Content Include="Views\Home\Canada.cshtml" />
+    <Content Include="Views\Home\EUA.cshtml" />
+    <Content Include="Views\Usuario\Produtos.cshtml" />
+    <Content Include="Views\Shared\_usuarioLayout.cshtml" />
+    <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\Usuario\ProdutosComCompraOnline.cshtml" />
+    <Content Include="Views\Usuario\InformacoesDoCartao.cshtml" />
+    <Content Include="Views\Admin\Cartao.cshtml" />
+    <Content Include="Views\Home\Irlanda.cshtml" />
+    <Content Include="Views\Usuario\AgendarContato.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Usuario\Pacotes.cshtml" />
+    <Content Include="Views\Usuario\Seguros.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Regra de Negocios\Regra de Negocios.csproj">
+      <Project>{dc84dfbe-600e-4c12-aa52-afb47e37c2cd}</Project>
+      <Name>Regra de Negocios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49300</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49300/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

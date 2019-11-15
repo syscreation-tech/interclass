@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Regra_de_Negocios.Entity.Pacotes>
+@{
+    ViewBag.Title = "Pacotes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Pacotes</h2>
+    <div>
+        @*<img src="~/img/canada.PNG" />*@
+    </div>
+    <div>
+        @foreach (var pacotes in Model) {
+        <p>O destino do pacote é para: @Html.DisplayFor(modelItem => pacotes.destino)</p>
+        <p>O Valor: @Html.DisplayFor(modelItem => pacotes.valor)</p>
+        }
+    </div>

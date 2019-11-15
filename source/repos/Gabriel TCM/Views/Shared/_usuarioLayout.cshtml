@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width:device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/Content/Site.css" />
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bootstrap/css")
+    <title>@ViewBag.Title - Meu Aplicativo ASP.NET</title>
+    <style>
+        .ajuste {
+            position: relative;
+            left: 70px;
+            text-align: justify;
+        }
+
+            .ajuste h3 {
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <div id="header">
+            <div id="menu-mobile-mask" class="visible-xs"></div>
+
+            <div id="menu-mobile" class="visible-xs">
+                @Html.ActionLink("Nome do aplicativo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <div class="bar-close">
+                        <button type="button" class="btn btn-close"><i class="fa fa-close"></i></button>
+                    </div>
+
+            </div>
+
+            <div class="container">
+                <img id="logotipo" />
+            </div>
+
+            <div class="header-black">
+
+                <div class="container">
+
+                    <input type="search" id="input-search-mobile" class="visible-xs" placeholder="search...">
+
+                    <button id="btn-bars" type="button"><i class="fa fa-bars"></i></button>
+                    <button id="btn-search" type="button"><i class="fa fa-search"></i></button>
+
+
+                </div>
+
+            </div>
+
+            <div class="container">
+
+                <div class="row">
+
+                    <nav id="menu" class="pull-right">
+                        <ul>
+                            <li>@Html.ActionLink("Início", "Index", "Usuario")</li>
+                            <li>@Html.ActionLink("Pacotes", "Pacotes", "Usuario")</li>
+                            <li>@Html.ActionLink("Produtos", "ProdutosComCompraOnline", "Usuario")</li>
+                            <li>@Html.ActionLink("Seguros", "Seguros", "Usuario")</li>
+                            <li class="search">
+                                <div class="input-group">
+                                    <input type="search" placeholder="search" id="input-search">
+                                    <span class="input-group-btn">
+                                        <button type="button"><i class="fa fa-search"></i></button>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <section>
+
+        <div id="banner">
+
+            <h1>INTERCLASS<small>TE GARANTIMOS UMA EXPERIÊNCIA CLASSE A!!</small></h1>
+
+        </div>
+    </section>
+    @RenderBody()
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Meu Aplicativo ASP.NET</p>
+    </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/owl.carousel/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/js/efeitos.js"></script>
+
+</body>
+</html>

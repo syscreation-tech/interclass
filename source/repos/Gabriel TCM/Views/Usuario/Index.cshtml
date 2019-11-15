@@ -1,0 +1,112 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_usuarioLayout.cshtml";
+}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+<style>
+
+</style>
+<div class="posicionamento">
+    <h2>
+        <img src="~/img/seta1.png" />CONFIRA AS OPÇÕES EM DESTAQUE!!
+    </h2>
+</div>
+    <div class="teste4">
+        <a id="foto1" href="~/Views/Home/Index.cshtml" target="_self">
+            <img src="~/img/oi.png" />
+        </a>
+    </div>
+    <div class="teste3">
+        @*férias*@
+        <a id="foto2" href="/Home/Ferias" target="_self">
+            <img src="~/img/ferias.png" alt="Bold" />
+        </a>
+    </div>
+    <div class="teste">
+        @*high school canada*@
+        <a id="foto3" href="/Home/Canada" target="_self">
+            <img src="~/img/high school.png" alt="Bold" />
+        </a>
+    </div>
+    <div class="teste2">
+        @*bus*@
+        <a id="foto4" href="/Home/EUA" target="_self">
+            <img src="~/img/high.png" alt="Bold" />
+        </a>
+    </div>
+    <div class="teste1">
+        @*Dublin*@
+        <a id="foto5" href="/Home/Irlanda" target="_self">
+            <img src="~/img/irlanda.png" alt="Bold" />
+        </a>
+    </div>
+
+<section>
+    <h2>
+        <img src="~/img/seta1.png" />PRINCIPAIS LUGARES PARA O SEU INTERCAMBIO!!
+    </h2>
+    <br />
+    <br />
+    <div class="w3-content w3-display-container">
+
+        <div class="w3-display-container mySlides">
+            <img src="~/img/inglaterra2.png" style="width:300px; height:200px;">
+            <img src="~/img/inglaterra.png" style="width:300px; height:200px;">
+            <img src="~/img/inglaterra1.png" style="width:300px; height:200px;">
+
+            <div class="w3-display-bottomright w3-large w3-container w3-padding-3 w3-black">
+                INGLATERRA!!
+            </div>
+        </div>
+        <div class="w3-display-container mySlides">
+            <img src="~/img/canada.png" style="width:300px; height:200px;" />
+            <img src="~/img/canada1.png" style="width:300px; height:200px;" />
+            <img src="~/img/canada2.png" style="width:300px; height:200px;" />
+            <div class="w3-display-bottomright w3-large w3-container w3-padding-3 w3-black">
+                CANADÁ!!
+            </div>
+        </div>
+        <div class="w3-display-container mySlides">
+            <img src="~/img/irlanda1.png" style="width:300px; height:200px;" />
+            <img src="~/img/irlanda2.png" style="width:300px; height:200px;" />
+            <img src="~/img/irlanda3.png" style="width:300px; height:200px;" />
+            <div class="w3-display-bottomright w3-large w3-container w3-padding-3 w3-black">
+                IRLANDA!!
+            </div>
+        </div>
+
+        <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-display-right w3-black" onclick="plusDivs(+1)">&#10095;</button>
+
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+    <div>
+        <img src="img/linha.png" style="width:910px;height:10px;" />
+    </div>
+</section>
+
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+
