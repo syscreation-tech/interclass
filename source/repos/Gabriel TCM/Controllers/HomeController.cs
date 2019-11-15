@@ -10,7 +10,7 @@ using System.Web.Security;
 namespace Gabriel_TCM.Controllers
 {
     public class HomeController : Controller
-    {
+    { 
         LoginService ac = new LoginService();
         public ActionResult Index()
         {

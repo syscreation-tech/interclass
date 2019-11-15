@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Web;
+using MySql.Data.MySqlClient;
 using Regra_de_Negocios;
 using Regra_de_Negocios.Entity;
 
@@ -11,40 +12,37 @@ namespace Gabriel_TCM
 {
     public class Cadastrar
     {
-        private DBSessao db;
+        conexao con = new conexao();
         public void Insert(USUARIO usuario)
         {
-            var query = "";
-            query += "insert into USUARIO(NOME_USUARIO,LOGIN,SENHA,EMAIL)";
-            query += string.Format("values ('{0}', '{1}', '{2}', '{3}');", usuario.NOME_USUARIO, usuario.LOGIN, usuario.SENHA, usuario.EMAIL);
+            MySqlCommand cmd = new MySqlCommand("insert into USUARIO(NOME_USUARIO,LOGIN,SENHA,EMAIL values ('@Nome', '@Login', '@Senha', '@Email');",con.MyConectarBD());
+            cmd.Parameters.Add("@Nome", MySqlDbType.VarChar).Value = usuario.NOME_USUARIO;
+            cmd.Parameters.Add("@Login", MySqlDbType.VarChar).Value = usuario.LOGIN;
+            cmd.Parameters.Add("@Senha", MySqlDbType.VarChar).Value = usuario.SENHA;
+            cmd.Parameters.Add("@Email", MySqlDbType.VarChar).Value = usuario.EMAIL;
 
-            using (db = new DBSessao())
-            {
-                db.ExecutaComando(query);
-            }
+            cmd.ExecuteNonQuery();
+            con.MyDesconectarBD();
         }
         public void InsereDadosCartao(Produto produto)
         {
-            var query = "";
-            query += "insert into InfoCartao(NumCartao,CodCardSegu,NomeProp,DataValid)";
-            query += string.Format("values('{0}', '{1}', '{2}', '{3}');", produto.NumCartao, produto.CodCardSegu, produto.NomeProp, produto.DataValid);
+            MySqlCommand cmd = new MySqlCommand("insert into InfoCartao(NumCartao,CodCardSegu,NomeProp,DataValid) values('@NumCartao', '@CodCardSegu', '@NomeProp', '@DataValid');",con.MyConectarBD());
 
-            using (db = new DBSessao())
-            {
-                db.ExecutaComando(query);
-            }
-        }
-        public void InsereDadosParaAgendamento(Agendamento agendamento)
-        {
-            var query = "";
-            query += "insert into Agendamento(Nome_usuario,EMAIL)";
-            query += string.Format("values ('{0}', '{1}');", agendamento.Nome_Usuario, agendamento.EMAIL);
+            cmd.Parameters.Add("@NumCartao", MySqlDbType.VarChar).Value = produto.NumCartao;
+            cmd.Parameters.Add("@CodCartao",MySqlDbType.Int16).Value = produto.CodCardSegu;
+            cmd.Parameters.Add("@NomeProp",MySqlDbType.VarChar).Value = produto.NomeProp;
+            cmd.Parameters.Add("@DataValid",MySqlDbType.VarChar).Value = produto.DataValid;
 
-            using (db = new DBSessao())
-            {
-                db.ExecutaComando(query);
-            }
         }
+        //public void InsereDadosParaAgendamento(Agendamento agendamento)
+        //{
+        //    MySqlCommand cmd = new MySqlCommand("insert into Agendamento(Nome_usuario,EMAIL) values ('@Nome_usuario', '{1}');");
+
+        //    using (db = new DBSessao())
+        //    {
+        //        db.ExecutaComando(query);
+        //    }
+        //}
 
     }
 }
