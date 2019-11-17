@@ -10,7 +10,13 @@ using System.Web.Security;
 namespace Gabriel_TCM.Controllers
 {
     public class HomeController : Controller
-    { 
+    {
+        public ActionResult Sobre()
+        {
+            return View();
+        }
+
+
         LoginService ac = new LoginService();
         public ActionResult Index()
         {
