@@ -144,7 +144,6 @@
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -187,27 +186,17 @@
     <Content Include="img\canada2.PNG" />
     <Content Include="img\crianca.jpeg" />
     <Content Include="img\eua.PNG" />
-    <Content Include="img\ferias.png" />
     <Content Include="img\header1.jpg" />
     <Content Include="img\high school.png" />
     <Content Include="img\high.png" />
-    <Content Include="img\inglaterra.PNG" />
-    <Content Include="img\inglaterra1.PNG" />
-    <Content Include="img\inglaterra2.PNG" />
-    <Content Include="img\irlanda.PNG" />
     <Content Include="img\irlanda1.PNG" />
     <Content Include="img\irlanda2.PNG" />
     <Content Include="img\irlanda3.PNG" />
     <Content Include="img\linha.png" />
-    <Content Include="img\oi.png" />
-    <Content Include="img\oi1.PNG" />
-    <Content Include="img\oi2.PNG" />
-    <Content Include="img\oi3.png" />
+    <Content Include="img\logo InterClass. %281%29.png" />
     <Content Include="img\prod5.PNG" />
     <Content Include="img\seta.png" />
-    <Content Include="img\teste.png" />
     <Content Include="img\titulo3.png" />
-    <Content Include="img\zelandia.PNG" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\efeitos.js" />

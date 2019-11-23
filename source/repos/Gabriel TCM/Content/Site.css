@@ -173,8 +173,7 @@ header {
         position: absolute;
         top: 20px;
         z-index: 3;
-        width: 32px;
-        height: 32px;
+      
     }
 
 #banner h1.efeito {
@@ -235,7 +234,9 @@ header {
             color: #FFF;
             font-size: 16px;
             padding: 10px 25px;
+            font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
+            float: right;
         }
 
         #menu li.search .input-group {
@@ -252,7 +253,7 @@ header {
     #banner h1 {
         transition: 1s;
         color: #fff;
-        top: 300px;
+        top: 100px;
         position: relative;
         font-size: 92px;
         text-shadow: 2px 2px 2px rgba(0, 0, 0, .45);
@@ -268,6 +269,17 @@ header {
             font-weight: bold;
         }
 
+#row {
+    color: #FFF;
+    font-size: 16px;
+    padding: 10px 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    float: right;
+}
+ 
+        
+        
 #news {
     position: relative;
     top: -110px;
@@ -532,6 +544,7 @@ video {
     background: url("../img/logotipo.png") no-repeat;
     position: relative;
     width: 200px;
+    height: 150px;
 }
 ul, ol{
 

@@ -30,62 +30,49 @@
     <header>
         <div id="header">
             <div id="menu-mobile-mask" class="visible-xs"></div>
+            <button type="button" class="btn btn-close"><i class="fa fa-close"></i></button>
+        </div>
 
-            <div id="menu-mobile" class="visible-xs">
-                @Html.ActionLink("InterClass", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                <div class="bar-close">
-                        <button type="button" class="btn btn-close"><i class="fa fa-close"></i></button>
-                    </div>
+        <!-- </div>
+     <div align="left"">
+     <div class="container">
+         <img id="logotipo" />
+     </div>
+     </div>-->
 
-            </div>
-
-            <div class="container">
-                <img id="logotipo" />
-            </div>
-
-            <div class="header-black">
-
-                <div class="container">
-
-                    <input type="search" id="input-search-mobile" class="visible-xs" placeholder="search...">
-
-                    <button id="btn-bars" type="button"><i class="fa fa-bars"></i></button>
-                    <button id="btn-search" type="button"><i class="fa fa-search"></i></button>
-
-
-                </div>
-
-            </div>
+        <div class="header-black">
 
             <div class="container">
 
-                <div class="row">
+                <button id="btn-bars" type="button"><i class="fa fa-bars"></i></button>
+                <button id="btn-search" type="button"><i class="fa fa-search"></i></button>
 
-                    <nav id="menu" class="pull-right">
-                        <ul>
-                            <li>@Html.ActionLink("Sobre nós", "Sobre", "Home")</li>
-                            <li>@Html.ActionLink("Planos", "Index", "Plano")</li>
-                            <li>@Html.ActionLink("Pacotes", "Index", "Pacote")</li>
-                            <li>@Html.ActionLink("Seguros", "Index", "Seguro")</li>
-                            <li>@Html.ActionLink("Orçamento", "Index", "Orcamento")</li>
-                            <li>@Html.ActionLink("Agenda", "Index", "Agenda")</li>
-                            <li>@Html.ActionLink("Cadastre-se", "Cadastro", "Cliente")</li>
-                            <li>@Html.ActionLink("Login", "Login", "Home")</li>
-                            <li class="search">
-                                <div class="input-group">
-                                    <input type="search" placeholder="search" id="input-search">
-                                    <span class="input-group-btn">
-                                        <button type="button"><i class="fa fa-search"></i></button>
-                                    </span>
-                                </div>
-                            </li>
-                        </ul>
-                    </nav>
 
-                </div>
+            </div>
 
+        </div>
+
+        <div class="container">
+
+            <div class="row">
+
+                <nav id="menu" class="pull-right">
+                    <ul>
+                        <li>@Html.ActionLink("InterClass", "Home", "Home")</li>
+                        <li>@Html.ActionLink("Sobre nós", "Sobre", "Home")</li>
+                        <li>@Html.ActionLink("Planos", "Index", "Plano")</li>
+                        <li>@Html.ActionLink("Pacotes", "Index", "Pacote")</li>
+                        <li>@Html.ActionLink("Seguros", "Index", "Seguro")</li>
+                        <li>@Html.ActionLink("Orçamento", "Index", "Orcamento")</li>
+                        <li>@Html.ActionLink("Agenda", "Index", "Agenda")</li>
+                        <li>@Html.ActionLink("Cadastre-se", "Cadastro", "Cliente")</li>
+                        <li>@Html.ActionLink("Login", "Login", "Home")</li>
+                    </ul>
+                </nav>
+                        
             </div>
         </div>
+
     </header>
 
     <section>
