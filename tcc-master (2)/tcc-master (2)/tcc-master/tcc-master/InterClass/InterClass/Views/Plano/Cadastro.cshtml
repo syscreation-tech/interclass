@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Cadastro";
+}
+
+<header class="masthead">
+
+    <div class="container page-content">
+
+        <div class="row">
+            <div class="col-12">
+                <h2>Cadastro Plano</h2>
+            </div>
+
+            <div class="col-12">
+                <input type="text" placeholder="Tipo de Plano" name="Plano" class="form-control" />
+            </div>
+
+            <div class="col-6">
+                <input type="number" placeholder="Valor" name="Valor" class="form-control" />
+               
+            </div>
+
+            <div class="col-6">
+                <input type="text" placeholder="Destino" name="Destino" class="form-control" />
+            </div>
+
+            <div class="col-12">
+                <textarea placeholder="Descrição" rows="4" cols="12" class="form-control"></textarea>
+            </div>
+
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-4">
+                <input type="button" class="btn btn-success" value="Confirmar" onclick="Confirmar();" />
+            </div>
+
+        </div>
+    </div>
+
+</header>
+
+@section scripts{
+
+    <script>
+    function Confirmar() {
+        alert('Cadastrado com exito!');
+        }
+
+      
+    </script>
+
+}

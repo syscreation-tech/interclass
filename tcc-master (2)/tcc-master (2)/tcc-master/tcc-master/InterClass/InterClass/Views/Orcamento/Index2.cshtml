@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Negocio.Entity.Seguros>
+
+@{
+    ViewBag.Title = "Index2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Escolha o(s) seu(s) seguro(s)!</h2>
+<table class="table">
+    <tr>
+        <th hidden>
+            @Html.DisplayNameFor(model => model.Idseg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tiposeg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Valorseg)
+        </th>
+        <th>
+            <input type="checkbox" name="ckAtivo" value="1" />
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr id="row">
+    <td class='passidpac' id="@ViewBag.idpacote"hidden>
+        @Html.DisplayFor(modelItem => item.Idseg)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Tiposeg)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Valorseg)
+    </td>
+    <th>
+        <input type="checkbox" class="ckativo" id="@(item.Idseg)"name="ckativo" value="1" />
+    </th>
+</tr>
+    
+}
+</table>
+<button id="btnIndex3">Proximo!</button>
+<script>
+    $(function () {
+        $(".ckativo").click(function () { 
+            var checkbox = $(this).prop("checked");
+            var ident = $(this).attr("id");
+            var idpacote = $(".passidpac").attr("id");
+            if (checkbox) {
+                console.log("Sim");
+                $("#btnIndex3").on("click", function () {
+                    $.post("Orcamento/index3", {id : idpacote, idseg : ident}, function (pong) { $("body").html(pong) });
+                });
+            } else if (!checkbox) {
+                console.log("Nao");
+            }
+        });
+    });
+
+
+</script>

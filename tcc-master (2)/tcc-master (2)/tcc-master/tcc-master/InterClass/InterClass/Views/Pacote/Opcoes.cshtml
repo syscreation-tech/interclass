@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Negocio.Entity.Pacotes>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/interclass.css" src="stylesheet" />
+@{
+    var dubai = ViewBag.dublin;
+    var valor = ViewBag.valor;
+    if (valor == "4")
+    {
+
+        <section id="pacote">
+            <div class="container-fluid p-0">
+                <h2 class="text-center mt-0">Dublin</h2>
+                <hr class="divider my-4">
+                <div class="inline">
+                    <div>
+                        <h3 id="estudante">Estudante</h3>
+                        @Html.ActionLink("Orçar", "Index", "Orcamento", new { idpasspar = dubai }, null)
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    }
+
+}

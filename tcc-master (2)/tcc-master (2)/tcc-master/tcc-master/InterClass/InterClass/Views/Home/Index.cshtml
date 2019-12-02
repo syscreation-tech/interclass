@@ -1,0 +1,179 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<!-- Masthead -->
+<header class="masthead">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-10 align-self-end">
+                <h1 class="text-uppercase text-white font-weight-bold">INTERCLASS</h1>
+                <hr class="divider my-4">
+            </div>
+            <div class="col-lg-8 align-self-baseline">
+                <p class="text-white-75 font-weight-light mb-5">VAMOS TE GARANTIR UMA ÓTIMA EXPERIÊNCIA EM INTERCÂMBIO!</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- About Section -->
+<section class="page-section bg-primary" id="about">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="text-white mt-0">Nós temos o que você precisa!</h2>
+                <hr class="divider light my-4">
+                <p class="text-white-50 mb-4">Somos uma agência de viagens especializada em intercâmbio.</p>
+                <p class="text-white-50 mb-4">Estamos no mercado desde 2015 e sempre procuramos inovar para superar suas expectativas e para isso contamos com parceiros em todas as cidades em que promovemos intercâmbio. </p>
+                <p class="text-white-50 mb-4"> A InterClass tem tudo o que você precisa para fazer a viagem de intercâmbio dos seus sonhos! Monte sua viagem de intercâmbio com nossos planos e pacotes. Estamos esperando!</p>
+                <!--<a class="btn btn-light btn-xl js-scroll-trigger" href="#">Planos!</a> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Services Section -->
+<section class="page-section" id="plano">
+    <div class="container">
+        <h2 class="text-center mt-0">Planos</h2>
+        <hr class="divider my-4">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-3">
+                    <a class="plano-box" href="~/img/Plano/bandeira-dos-estados-unidos-da-america_1401-253.jpg" />
+                    <img class="img-fluid" src="~/img/Plano/bandeira-dos-estados-unidos-da-america_1401-253.jpg" alt="">
+                    <h5 class="h5 mb-2">@Html.ActionLink("Estados Unidos ", "Opcoes", "Pacote" , new { ident =1 })</h5>
+                    <p class="text-muted mb-0">New York</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-3">
+                    <a class="plano-box" href="~/img/Plano/bandeira-do-canada_1401-84.jpg" />
+                    <img class="img-fluid" src="~/img/Plano/bandeira-do-canada_1401-84.jpg" alt="">
+                    <h5 class="h5 mb-2">Canadá</h5>
+                    <p class="text-muted mb-0">Toronto</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-3">
+                    <a class="plano-box" href="~/img/Plano/bandeira-da-australia_1401-59.jpg" />
+                    <img class="img-fluid" src="~/img/Plano/bandeira-da-australia_1401-59.jpg" alt="">
+                    <h5 class="h5 mb-2">Austrália</h5>
+                    <p class="text-muted mb-0">Sidney</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-3">
+                    <a class="plano-box" href="~/img/Plano/bandeiras-da-republica-da-irlanda_1232-3047.jpg" />
+                    <img class="img-fluid" src="~/img/Plano/bandeiras-da-republica-da-irlanda_1232-3047.jpg" alt="">
+                    <h5 class="h5 mb-2">Irlanda</h5>
+                    <p class="text-muted mb-0">Dublin</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- pacote Section -->
+<section id="pacote">
+    <div class="container-fluid p-0">
+        <h2 class="text-center mt-0">Pacotes</h2>
+        <hr class="divider my-4">
+        <div class="row no-gutters">
+            <div class="col-lg-3 col-sm-4">
+                <a class="pacote-box" href="Pacote/Opcoes?id=1" />
+                <img class="img-fluid" src="~/img/euaw.jpg" alt="">
+                <div class="pacote-box-caption">
+                    <div class="project-category text-white-50">
+                        New York
+                    </div>
+                    <div class="project-name">
+                        Estados Unidos
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-4">
+                <a class="pacote-box" href="Pacote/Opcoes?id=2" />
+                <img class="img-fluid" src="~/img/canadaw.jpg" alt="">
+                <div class="pacote-box-caption">
+                    <div class="project-category text-white-50">
+                        Toronto
+                    </div>
+                    <div class="project-name">
+                        Canadá
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-4">
+                <a class="pacote-box" href="Pacote/Opcoes?id=3" />
+                <img class="img-fluid" src="~/img/australiaw.jpg" alt="">
+                <div class="pacote-box-caption">
+                    <div class="project-category text-white-50">
+                        Sidney
+                    </div>
+                    <div class="project-name">
+                        Austrália
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-4">
+                <a class="pacote-box" href="Pacote/Opcoes?id=4" />
+                <img class="img-fluid" src="~/img/dublinw.jpg" alt="">
+                <div class="pacote-box-caption">
+                    <div class="project-category text-white-50">
+                        Dublin
+                    </div>
+                    <div class="project-name">
+                        Saiba Mais...
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="page-section" id="seguro">
+    <div class="container">
+        <h2 class="text-center mt-0">Seguros</h2>
+        <hr class="divider my-4">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <i class="fas fa-4x fa-gem text-primary mb-4"></i>
+                    <h3 class="h4 mb-2">Seguro 1</h3>
+                    <p class="text-muted mb-0">Esse é o seguro 1!</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
+                    <h3 class="h4 mb-2">Seguro 2</h3>
+                    <p class="text-muted mb-0">Esse é o seguro 2.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <i class="fas fa-4x fa-globe text-primary mb-4"></i>
+                    <h3 class="h4 mb-2">Seguro 3</h3>
+                    <p class="text-muted mb-0">Esse é o seguro 3!</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <i class="fas fa-4x fa-heart text-primary mb-4"></i>
+                    <h3 class="h4 mb-2">Seguro 4</h3>
+                    <p class="text-muted mb-0">Esse é o seguro 4</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

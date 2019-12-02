@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index3";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Selecione a data que voce deseja vir fazer a entrevista e concluir o planejamento da sua viagem:</h4>
+<input type="text" name="agenda" id="dtagenda" />
+<button id="end">Concluir</button>
+<i id="@ViewBag.idpac" class="idpac" hidden></i>
+<i id="@ViewBag.idseg" class="idseg" hidden></i>
+<script>
+    $(function () {
+        $("#end").on("click", function () {
+            var valordt = $("#dtagenda").val();
+            var idpacote = $(".idpac").attr("id");
+            var idseguro = $(".idseg").attr("id");
+            $.post("Orcamento/Gerar", { dt: valordt, idpac: idpacote, idseg: idseguro }, function (pong) {
+                $("body").html(pong);
+
+            });
+        });
+    });
+</script>
+

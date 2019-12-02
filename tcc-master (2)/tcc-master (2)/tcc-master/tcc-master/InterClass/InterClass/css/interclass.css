@@ -1,0 +1,32 @@
+﻿.page-content {
+    background-color: beige;
+    border-radius: 12px;
+    padding: 30px;
+}
+#mainNav .navbar-brand{
+    color:black;
+}
+#mainNav .navbar-nav .nav-item .nav-link{
+    color:black;
+    padding: 0 1rem;
+}
+#mainNav {
+    position: relative;
+}
+
+#estudante{
+    margin-right:15px;
+    padding:10px;
+    border: 2px groove cyan;
+}
+#trabalho{
+    margin-right:15px;
+    padding:10px;
+    border: 2px groove cyan;
+}
+.inline{
+    display:inline-flex;
+    text-align:center;
+    left:39%;
+    position:relative;
+}

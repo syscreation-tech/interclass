@@ -1,0 +1,110 @@
+﻿@model Negocio.Entity.UsuarioCad
+@{
+    ViewBag.Title = "Cadastro";
+}
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    <header class="masthead">
+
+        <div class="container page-content">
+
+            <div class="row">
+                <div class="col-12">
+                    <h2>Cadastro Cliente</h2>
+                </div>
+
+                <div class="col-8">
+                    <input type="text" placeholder="Nome Completo" name="Nome" class="form-control" />
+                </div>
+                <div class="col-4">
+                    <input type="date" placeholder="Data de nasc" name="Dt" class="form-control" />
+                </div>
+
+                <div class="col-6">
+                    <input type="text" placeholder="RG" name="Rg" class="form-control" />
+                </div>
+                <div class="col-6">
+                    <input type="text" placeholder="Cpf" name="Cpf" class="form-control" />
+                </div>
+
+                <div class="col-12">
+                    <input type="text" placeholder="End" name="End" class="form-control" />
+                </div>
+                @*<div class="col-12">
+            <input type="text" placeholder="Complemento" class="form-control" />
+        </div>*@
+                <div class="col-8">
+                    <input type="text" placeholder="Cidade" name="Cidade" class="form-control" />
+                </div>
+                <div class="col-4">
+                    <select class="form-control" name="Uf">
+                        <option value="UF">UF</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraiba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernanmbuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+                <div class="col-6">
+                    <input type="email" placeholder="Email" name="Email" class="form-control" />
+                </div>
+                <div class="col-6">
+                    <input type="email" placeholder="Email" name="Email" class="form-control" />
+                </div>
+                <div class="col-3">
+                    <input type="text" placeholder="Telefone" name="Tel" class="form-control" />
+                </div>
+                <div class="col-3">
+                    <input type="text" placeholder="Telefone" name="Tel" class="form-control" />
+                </div>
+                <div class="col-6">
+                    <input type="text" placeholder="Passaporte" name="Npass" class="form-control" />
+                </div>
+                <div class="col-3">
+                    <input type="text" placeholder="Login" name="Login" class="form-control" />
+                </div>
+                <div class="col-3">
+                    <input type="password" placeholder="Password" name="Senha" class="form-control" />
+                </div>
+
+            </div>
+            <hr />
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" class="btn btn-success" value="Confirmar" />
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</header>
+
+}
