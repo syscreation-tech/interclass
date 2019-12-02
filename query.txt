@@ -1,0 +1,201 @@
+create database dbIntercambio;
+use dbIntercambio;
+create table tb_consultor(
+idcons int primary key auto_increment,
+nmcons varchar (100) not null,
+telcons varchar (13) not null,
+emailcons varchar (60) not null,
+endcons varchar (100) not null,
+logincons varchar (50) not null,
+senhacons varchar (10) not null
+);
+
+
+create table tb_gerente(
+idger int primary key auto_increment,
+nmger varchar (100) not null,
+telger varchar (13) not null,
+emailger varchar (60) not null,
+endger varchar (100) not null,
+loginger varchar (50) not null,
+senhager varchar (10) not null
+);
+
+
+create table tb_cliente(
+idclie int primary key auto_increment,
+nmclie varchar (100) not null,
+telclie varchar (13) not null,
+emailclie varchar (60) not null,
+endclie varchar (100) not null,
+cpfclie varchar (11) not null,
+rgclie varchar (20) not null,
+dtnasc varchar(10) not null,
+ufclie char (2) not null,
+npassporte varchar (8) not null,
+loginclie varchar (50) not null,
+senhaclie varchar (10) not null
+);
+
+
+create table tb_usuario (
+cod_cons int,
+cod_ger int,
+cod_clie int,
+tipousu int,
+ foreign key (cod_cons) references tb_consultor(idcons),
+ foreign key (cod_ger) references tb_gerente (idger),
+ foreign key (cod_clie) references tb_cliente (idclie)
+);
+
+create table tb_seguros(
+idseg int primary key auto_increment,
+tiposeg varchar (200) not null,
+valorseg decimal (10,2) not null
+);
+
+insert into tb_seguros (tiposeg,valorseg) values ('Emergências Médicas','2000.00');
+insert into tb_seguros (tiposeg,valorseg) values ('Emergências Odontológicas','1000.00');
+insert into tb_seguros (tiposeg,valorseg) values ('Assitência Jurídica','1000.00');
+insert into tb_seguros (tiposeg,valorseg) values ('Auxílio no Extravio de Bagagens','500.00');
+
+
+
+create table tb_debito(
+iddeb int primary key auto_increment,
+nome varchar (100) not null,
+ncartao  varchar (30)not null,
+bandeira char (10) not null,
+valordb decimal (10,2) not null
+);
+
+insert into tb_debito (nome,ncartao,bandeira,valordb) values ('Ana Silva','1234567891234567896','Visa','8000.00');
+insert into tb_debito (nome,ncartao,bandeira,valordb) values ('Carlos Machado','7896321458796321458','Mastercard','5000.00');
+insert into tb_debito (nome,ncartao,bandeira,valordb) values ('Vitoria Castro','4563214789652365471','Hipercard','7000.00');
+insert into tb_debito (nome,ncartao,bandeira,valordb) values ('Pedro Gonçalves','852963147789654123','Visa','4000.00');
+insert into tb_debito (nome,ncartao,bandeira,valordb) values ('Alice Santos','3216549871472583698','Mastercard','6000.00');
+insert into tb_debito (nome,ncartao,bandeira,valordb) values ('Acsa Silva','548693217874562100','Mastercard','8000.00');
+insert into tb_debito (nome,ncartao,bandeira,valordb) values ('Alessandra Souza','741258963014702580','Elo','12000.00');
+insert into tb_debito (nome,ncartao,bandeira,valordb) values ('Alice Camargo','36908520147014708526','Visa','10000.00');
+insert into tb_debito (nome,ncartao,bandeira,valordb) values ('Antonio Carlos','9632587412587412037','Visa','9000.00');
+insert into tb_debito (nome,ncartao,bandeira,valordb) values ('Barbara Moro','3020104050069087045069','Hipercard','15000.00');
+insert into tb_debito (nome,ncartao,bandeira,valordb) values ('Everton Barbosa','85409760123048709873','Mastercard','6000.00');
+insert into tb_debito (nome,ncartao,bandeira,valordb) values ('Gabriela Crispim Rosa','9874012580369701478','Mastercard','18000.00');
+insert into tb_debito (nome,ncartao,bandeira,valordb) values ('Humberto Valvassori','15987032140897506321','Elo','5000.00');
+insert into tb_debito (nome,ncartao,bandeira,valordb) values ('Janína Molina','123456078965041230','Visa','17000.00');
+insert into tb_debito (nome,ncartao,bandeira,valordb) values ('Kaike Silveira','98745610123658096527','Visa','7000.00');
+insert into tb_debito (nome,ncartao,bandeira,valordb) values ('Lamis Sayed Majzoub','32147895069875640158','Visa','16000.00');
+insert into tb_debito (nome,ncartao,bandeira,valordb) values ('Laura Praveto','623587412098563254705','Elo','16000.00');
+insert into tb_debito (nome,ncartao,bandeira,valordb) values ('Leonardo Pulli','12036095048078015089','Mastercard','9000.00');
+insert into tb_debito (nome,ncartao,bandeira,valordb) values ('Flávia Myamoto','74108520963036902580','Mastercard','15000.00');
+insert into tb_debito (nome,ncartao,bandeira,valordb) values ('Juliana Feitosa','85620974103258906410','Mastercard','12000.00');
+
+create table tb_credito(
+idcred int primary key auto_increment,
+nome varchar (100) not null,
+email varchar (60) not null,
+cpf varchar (11) not null,
+ncartao varchar (30) not null,
+bandeira char (10) not null,
+valcar decimal(10,2) not null,
+cod_seg_car int (3) not null,
+qtde_parcelas int (24) not null
+);
+
+insert into tb_credito (nome,email,cpf,ncartao,bandeira,valcar,cod_seg_car,qtde_parcelas)values ('Lucas Bragança','lucas@gmail.com', '78965412321','1236547899632587412','Mastercard','2000.00', 123,6);
+insert into tb_credito (nome,email,cpf,ncartao,bandeira,valcar,cod_seg_car,qtde_parcelas)values ('Andressa de Nogueira','andressa@gmail.com', '98745624782','9517532469871236547','Visa','7000.00', 498,10);
+insert into tb_credito (nome,email,cpf,ncartao,bandeira,valcar,cod_seg_car,qtde_parcelas)values ('Allan da Silva','allan@gmail.com', '34789512470','1234785496872365741','Hipercard','5000.00', 854,12);
+insert into tb_credito (nome,email,cpf,ncartao,bandeira,valcar,cod_seg_car,qtde_parcelas)values ('Juliana Albuquerque','juliana@gmail.com', '74125896312','852963741147258369','Mastercard','8000.00', 497,2);
+insert into tb_credito (nome,email,cpf,ncartao,bandeira,valcar,cod_seg_car,qtde_parcelas)values ('João Pereira','joão@gmail.com', '98765432140','1478523699517536478','Visa','12000.00', 125,24);
+insert into tb_credito (nome,email,cpf,ncartao,bandeira,valcar,cod_seg_car,qtde_parcelas)values ('Amanda Siqueira','amanda@gmail.com', '69874521485','54862179315975326489','Visa','3000.00', 791,4);
+insert into tb_credito (nome,email,cpf,ncartao,bandeira,valcar,cod_seg_car,qtde_parcelas)values ('Ana Clara Rosa','anaclara@gmail.com', '874596322','98754789632145685201','Visa','5000.00', 478,7);
+insert into tb_credito (nome,email,cpf,ncartao,bandeira,valcar,cod_seg_car,qtde_parcelas)values ('Guilherme Batista','guilherme@gmail.com', '35791486271','7896541232145698741','Elo','8000.00', 617,8);
+insert into tb_credito (nome,email,cpf,ncartao,bandeira,valcar,cod_seg_car,qtde_parcelas)values ('Pedro Sampaio','pedro@gmail.com', '37831586410','36985214785236998745','Mastercard','11000.00', 289,24);
+insert into tb_credito (nome,email,cpf,ncartao,bandeira,valcar,cod_seg_car,qtde_parcelas)values ('Hélio Barbosa Júnior','heliobj@gmail.com', '17418526987','1236987452314785241','Hipercard','7000.00', 557,3);
+insert into tb_credito (nome,email,cpf,ncartao,bandeira,valcar,cod_seg_car,qtde_parcelas)values ('Herika Leon Barbosa','herikaleon@gmail.com', '37341589542','852963741213654789','Elo','18000.00', 639,24);
+insert into tb_credito (nome,email,cpf,ncartao,bandeira,valcar,cod_seg_car,qtde_parcelas)values ('Glades Poli','glades@gmail.com', '96387451210','789541254632118864123','Visa','9000.00', 447,10);
+insert into tb_credito (nome,email,cpf,ncartao,bandeira,valcar,cod_seg_car,qtde_parcelas)values ('Edmilson Leon Feitosa','edmilson@gmail.com', '69865452174','5874123698521478543','Mastercard','6000.00', 943,5);
+insert into tb_credito (nome,email,cpf,ncartao,bandeira,valcar,cod_seg_car,qtde_parcelas)values ('Priscila Bueno','priscila@gmail.com', '89574123698','36541258745965236987','Visa','13000.00', 117,24);
+insert into tb_credito (nome,email,cpf,ncartao,bandeira,valcar,cod_seg_car,qtde_parcelas)values ('Thais Simões','thais@gmail.com', '24526928745','987456325874125489','Elo','20000.00', 248,12);
+insert into tb_credito (nome,email,cpf,ncartao,bandeira,valcar,cod_seg_car,qtde_parcelas)values ('Sara Lopes','sara@gmail.com', '65478993210','1234567899876543210','Hipercard','14000.00', 936,10);
+insert into tb_credito (nome,email,cpf,ncartao,bandeira,valcar,cod_seg_car,qtde_parcelas)values ('Nelson do Nascimento','nelson@gmail.com', '37314798520','123698745210036987','Visa','17000.00', 525,8);
+insert into tb_credito (nome,email,cpf,ncartao,bandeira,valcar,cod_seg_car,qtde_parcelas)values ('Gabriel da Costa Silva','gabrielcs@gmail.com', '95175369842','78965412321458796320','Visa','6000.00', 741,3);
+insert into tb_credito (nome,email,cpf,ncartao,bandeira,valcar,cod_seg_car,qtde_parcelas)values ('Fábio Porchat','fabio@gmail.com', '12315914785','369258147741852963','Mastercard','19000.00', 852,10);
+insert into tb_credito (nome,email,cpf,ncartao,bandeira,valcar,cod_seg_car,qtde_parcelas)values ('Júlia Rabelo','julia@gmail.com', '95185285471','639528417897564231000','Elo','1000.00', 963,10);
+
+
+create table tb_pagamentos(
+idpag int,
+iddeb int,
+idcred int,
+foreign key (iddeb) references tb_debito (iddeb),
+foreign key (idcred) references tb_credito (idcred)
+);
+
+create table tb_planos(
+idplan int primary key auto_increment,
+tipoplan varchar (200) not null,
+valorplan decimal (10,2) not null,
+destinoplan varchar (200) not null,
+idseg int,
+foreign key (idseg) references tb_seguros (idseg)
+);
+
+insert into tb_planos (tipoplan,valorplan,destinoplan,idseg) values ('Standard', 1500.00,'EUA, Canadá, Irlanda, Austrália',1);
+insert into tb_planos (tipoplan,valorplan,destinoplan,idseg) values ('Master', 1500.00,'EUA, Canadá, Irlanda, Austrália',2);
+
+
+create table tb_pacotes(
+idpac int primary key auto_increment,
+tipopac varchar (200) not null,
+valorpac decimal (10,2) not null,
+destinopac varchar (200) not null,
+idseg int,
+foreign key (idseg) references tb_seguros (idseg)
+);
+
+insert into tb_pacotes (tipopac,valorpac,destinopac,idseg) values ('Curso de Idiomas', 1000.00, 'Dublin/Irlanda',1);
+insert into tb_pacotes (tipopac,valorpac,destinopac,idseg) values ('Trabalhos', 2500.00, 'EUA/New York, Canadá/Toronto, Irlanda/Dublin, Austrália/Sidney',1);
+
+
+create table tb_agenda(
+idagen int primary key auto_increment,
+data_age varchar (10),
+hora time
+);
+
+insert into tb_agenda (data_age,hora) values ('02/11/2019', '09:00:00');
+insert into tb_agenda (data_age,hora) values ('02/11/2019', '10:00:00');
+insert into tb_agenda (data_age,hora) values ('02/11/2019', '11:00:00');
+insert into tb_agenda (data_age,hora) values ('02/11/2019', '14:00:00');
+insert into tb_agenda (data_age,hora) values ('02/11/2019', '15:00:00');
+insert into tb_agenda (data_age,hora) values ('02/11/2019', '16:00:00');
+insert into tb_agenda (data_age,hora) values ('03/11/2019', '09:00:00');
+insert into tb_agenda (data_age,hora) values ('03/11/2019', '10:00:00');
+insert into tb_agenda (data_age,hora) values ('03/11/2019', '11:00:00');
+insert into tb_agenda (data_age,hora) values ('03/11/2019', '14:00:00');
+insert into tb_agenda (data_age,hora) values ('03/11/2019', '15:00:00');
+insert into tb_agenda (data_age,hora) values ('03/11/2019', '16:00:00');
+insert into tb_agenda (data_age,hora) values ('04/11/2019', '09:00:00');
+insert into tb_agenda (data_age,hora) values ('04/11/2019', '10:00:00');
+insert into tb_agenda (data_age,hora) values ('04/11/2019', '11:00:00');
+insert into tb_agenda (data_age,hora) values ('04/11/2019', '14:00:00');
+insert into tb_agenda (data_age,hora) values ('04/11/2019', '15:00:00');
+insert into tb_agenda (data_age,hora) values ('04/11/2019', '16:00:00');
+insert into tb_agenda (data_age,hora) values ('05/11/2019', '09:00:00');
+insert into tb_agenda (data_age,hora) values ('05/11/2019', '10:00:00');
+
+create table tb_orcamento(
+idorc int primary key auto_increment,
+idpac int,
+idplan int,
+idseg int,
+vltotal decimal (10,2) not null,
+foreign key (idpac) references tb_pacotes (idpac),
+foreign key (idplan) references tb_planos (idplan),
+foreign key (idseg) references tb_seguros (idseg)
+);
+select * from tb_pacotes;
+select * from tb_seguros; 
+ALTER TABLE tb_consultor add COLUMN tipousuario char;
+alter table tb_agenda add column idpaccomprado int;
