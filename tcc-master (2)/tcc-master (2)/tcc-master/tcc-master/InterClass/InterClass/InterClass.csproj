@@ -170,6 +170,7 @@
     <Content Include="img\Plano\bandeiras-da-republica-da-irlanda_1232-3047.jpg" />
     <Content Include="js\creative.js" />
     <Content Include="js\creative.min.js" />
+    <Content Include="js\login.js" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="vendor\bootstrap\js\bootstrap.js" />

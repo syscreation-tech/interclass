@@ -169,14 +169,22 @@ label{
 .modal-hide{
     animation: move 1000ms;
 }
-
-.squares li{
+*/
+.squares li {
     width: 40px;
-    height:40px;
-    background-color: black;
-    display:block;
-    position absolute;
-    bottom:40px;
-}*/
-
+    height: 40px;
+    background-color: rgba(255,255,255,0.15);
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    animation: up 2s infinite;
+    animation-direction: reverse;
+}
+@keyframes up{
+    from{
+       transform:translateY(0);
+    }to{
+         transform: translateY(-1200px);
+     }
+}
 
