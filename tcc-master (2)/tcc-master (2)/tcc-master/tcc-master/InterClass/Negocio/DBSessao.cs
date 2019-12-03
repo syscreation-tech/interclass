@@ -5,7 +5,7 @@ namespace Negocio.DBSessao
 {
     public class conexao
     {
-        MySqlConnection cn = new MySqlConnection("Server=localhost;DataBase=dbIntercambio;User=root;pwd=77508416");
+        MySqlConnection cn = new MySqlConnection("Server=localhost;DataBase=dbIntercambio;User=root;pwd=1234567");
         public static string msg;
 
         public MySqlConnection MyConectarBD()

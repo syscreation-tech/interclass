@@ -138,6 +138,7 @@
     <Content Include="css\creative.css" />
     <Content Include="css\creative.min.css" />
     <Content Include="css\interclass.css" />
+    <Content Include="css\interclass2.css" />
     <Content Include="css\login.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />

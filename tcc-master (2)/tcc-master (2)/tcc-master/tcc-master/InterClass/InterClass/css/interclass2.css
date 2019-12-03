@@ -1,0 +1,50 @@
+﻿
+.page-content {
+    background-color: beige;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+#mainNav .navbar-brand {
+    color: black;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+    color: black;
+    padding: 0 1rem;
+}
+
+#mainNav {
+    position: relative;
+}
+
+#estudante {
+    margin-right: 15px;
+    padding: 10px;
+    border: 2px groove cyan;
+}
+
+#trabalho {
+    margin-right: 15px;
+    padding: 10px;
+    border: 2px groove cyan;
+}
+
+.inline {
+    text-align: -webkit-center;
+    width: 300px;
+    position: relative;
+    display: -webkit-inline-box;
+    left: 30%;
+}
+
+#conftabs {
+    text-align: center;
+    border: 2px groove cyan;
+    margin-right: 15px;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+button {
+}
