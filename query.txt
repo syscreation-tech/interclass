@@ -154,7 +154,8 @@ idseg int,
 foreign key (idseg) references tb_seguros (idseg)
 );
 
-insert into tb_pacotes (tipopac,valorpac,destinopac,idseg) values ('Curso de Idiomas', 1000.00, 'Dublin/Irlanda',1);
+insert into tb_pacotes (tipopac,valorpac,destinopac) values ('Curso de Idiomas', 1000.00, 'New York/Estados Unidos');
+insert into tb_pacotes (tipopac,valorpac,destinopac) values ('Trabalho', 9648.00, 'New York/Estados Unidos');
 insert into tb_pacotes (tipopac,valorpac,destinopac,idseg) values ('Trabalhos', 2500.00, 'EUA/New York, Canadá/Toronto, Irlanda/Dublin, Austrália/Sidney',1);
 
 
@@ -195,7 +196,7 @@ foreign key (idpac) references tb_pacotes (idpac),
 foreign key (idplan) references tb_planos (idplan),
 foreign key (idseg) references tb_seguros (idseg)
 );
+select * from tb_agenda;
 select * from tb_pacotes;
-select * from tb_seguros; 
 ALTER TABLE tb_consultor add COLUMN tipousuario char;
-alter table tb_agenda add column idpaccomprado int;
+alter table tb_agenda add column idusu int;
