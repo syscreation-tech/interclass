@@ -1,58 +1,50 @@
 ﻿@model Negocio.Entity.Login
 @{
     ViewBag.Title = "Login";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
-<h3>Teste</h3>
+    <link href="~/css/login.css" rel="stylesheet">
 @using (Html.BeginForm("Login", "Home", FormMethod.Post))
 {
 
-    <fieldset>
 
-        <br />
-        <h2>Entrar</h2>
-        <br />
-        <div class="form-group">
-            <div class="input-group">
-                <span class="input-group-addon"><i style="font-size:20px;" class="fas fa-envelope"></i></span>
+        <section class="form-section">
+            <div class="form-wrapper">
+                <div class="input-block">
+                    <span class="input-group-addon"><i style="font-size:20px;" class="fas fa-envelope"></i></span>
 
-                @Html.EditorFor(x => x.Usuario, new 
-           {
-               htmlAttributes = new { id = "txtEmail", senha = "txtEmail", type = "text", @class = "form-control", placeholder = "Digite seu e-mail", required = "required", maxlength = "30" }
-           })
+                    @Html.EditorFor(x => x.Usuario, new
+               {
+                   htmlAttributes = new { id = "txtEmail", senha = "txtEmail", type = "text", @class = "form-control", placeholder = "Digite seu e-mail", required = "required", maxlength = "30" }
+               })
 
-                @Html.ValidationMessageFor(x => x.Usuario, "", new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(x => x.Usuario, "", new { @class = "text-danger" })
 
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <div class="input-group">
+            <div class="form-group">
+                <div class="input-block">
 
-                <span class="input-group-addon"><i style="font-size:20px;" class="fas fa-lock"></i></span>
+                    <span class="input-group-addon"><i style="font-size:20px;" class="fas fa-lock"></i></span>
 
-                @Html.EditorFor(x => x.Senha, new
-           {
-               htmlAttributes = new { id = "txtSenha", Senha = "txtSenha", type = "password", @class = "form-control", placeholder = "Digite sua senha", required = "required", maxlength = "10" }
-           })
+                    @Html.EditorFor(x => x.Senha, new
+               {
+                   htmlAttributes = new { id = "txtSenha", Senha = "txtSenha", type = "password", @class = "form-control", placeholder = "Digite sua senha", required = "required", maxlength = "10" }
+               })
 
-                @Html.ValidationMessageFor(x => x.Senha, "", new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(x => x.Senha, "", new { @class = "text-danger" })
 
+                </div>
             </div>
-        </div>
 
-        <input type="submit" class="button button-a button-big button-rouded" value="ENTRAR"><br />
-        <br />
-
-        <div class="form-group small clearfix">
-
-            @Html.ActionLink("Não tem uma conta?", "CadLogin")
-        </div>
-
-
-
-
-    </fieldset>
-
-
+            <input type="submit" class="button button-a button-big button-rouded" value="ENTRAR"><br />
+            <br />
+            <div class="form-group small clearfix">
+            </div>
+        </section>
+        <ul class="squares">
+            <li></li>
+        </ul>
 }
+<script src="~/js/creative.js"></script>

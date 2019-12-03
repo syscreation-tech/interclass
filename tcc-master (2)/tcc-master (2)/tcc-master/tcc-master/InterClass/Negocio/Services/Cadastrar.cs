@@ -35,7 +35,7 @@ namespace Negocio.Services
         }
         public void InsereDadosCartao(Produto produto)
         {
-            MySqlCommand cmd = new MySqlCommand("insert into InfoCartao(NumCartao,CodCardSegu,NomeProp,DataValid) values('@NumCartao', '@CodCardSegu', '@NomeProp', '@DataValid');",con.MyConectarBD());
+            MySqlCommand cmd = new MySqlCommand("insert into InfoCartao(NumCartao,CodCardSegu,NomeProp,DataValid) values('@NumCartao', '@CodCardSegu', '@NomeProp', '@DataValid');", con.MyConectarBD());
 
             cmd.Parameters.Add("@NumCartao", MySqlDbType.VarChar).Value = produto.NumCartao;
             cmd.Parameters.Add("@CodCartao",MySqlDbType.Int16).Value = produto.CodCardSegu;
@@ -43,11 +43,20 @@ namespace Negocio.Services
             cmd.Parameters.Add("@DataValid",MySqlDbType.VarChar).Value = produto.DataValid;
 
         }
-        public void InserirAgendas(int id, string dt)
+        public void InserirAgendas(string id, string dt, bool testa)
         {
-            MySqlCommand cmd = new MySqlCommand("Insert into tb_agenda(data_age,hora,idpaccomprado) values ('" + dt + "',''," + id + ");", con.MyConectarBD());
+            if(testa == false) { 
+                MySqlCommand cmd = new MySqlCommand("Insert into tb_agenda(data_age,hora,idpaccomprado,tipoplac) values ('" + dt + "',''," + id + ",'estudante');", con.MyConectarBD());
+                cmd.ExecuteNonQuery();
 
-            cmd.ExecuteNonQuery();
+            }
+            else if(testa == true)
+            {
+                MySqlCommand cmd = new MySqlCommand("Insert into tb_agenda(data_age,hora,idpaccomprado,tipoplac) values ('" + dt + "',''," + id + ",'trabalho');", con.MyConectarBD());
+                cmd.ExecuteNonQuery();
+            }
+
+
             con.MyDesconectarBD();
         }
 

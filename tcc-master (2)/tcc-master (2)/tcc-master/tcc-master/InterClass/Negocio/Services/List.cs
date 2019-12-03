@@ -42,7 +42,7 @@ namespace Negocio.Services
                 {
                     Idpac = int.Parse(leitor["idpac"].ToString()),
                     Tipopac = leitor["tipopac"].ToString(),
-                    Valor = leitor["valorpac"].ToString(),
+                    Valor = decimal.Parse(leitor["valorpac"].ToString()),
                     Destino = leitor["destinopac"].ToString()
                 });
 
@@ -69,13 +69,50 @@ namespace Negocio.Services
                     Idpac = Convert.ToInt32(leitor["Idpac"]),
                     Destino = Convert.ToString(leitor["destinopac"]),
                     Tipopac = Convert.ToString(leitor["tipopac"]),
-                    Valor = Convert.ToString(leitor["valorpac"])
+                    Valor = Convert.ToDecimal(leitor["valorpac"])
                     });
                 }
             }
             leitor.Close();
             return pac;
         }
+        public List<Pacotes> ListarVlrPacotesById(int id)
+        {
+            List<Pacotes> pac = new List<Pacotes>();
+            MySqlCommand cmd = new MySqlCommand("select valorpac from tb_pacotes where idpac = " + id, con.MyConectarBD());
 
+            MySqlDataReader leitor;
+            leitor = cmd.ExecuteReader();
+            if (leitor.HasRows)
+            {
+                while (leitor.Read())
+                {
+                    pac.Add(new Pacotes
+                    {
+                        Valor = Convert.ToDecimal(leitor["valorpac"])
+                    });
+                }
+            }
+            return pac;
+        }
+        public List<Seguros> ListarVlrSeguroById(int idseg)
+        {
+            List<Seguros> pac = new List<Seguros>();
+            MySqlCommand cmd = new MySqlCommand("select valorseg from tb_seguros where idseg = " + idseg, con.MyConectarBD());
+
+            MySqlDataReader leitor;
+            leitor = cmd.ExecuteReader();
+            if (leitor.HasRows)
+            {
+                while (leitor.Read())
+                {
+                    pac.Add(new Seguros
+                    {
+                        Valorseg = Convert.ToDecimal(leitor["valorseg"])
+                    });
+                }
+            }
+            return pac;
+        }
     }
 }

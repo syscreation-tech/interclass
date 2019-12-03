@@ -3,23 +3,49 @@
     ViewBag.Title = "Index";
 }
 
-<h4>Porfavor, olhe se os dados da sua viagem desejada estão corretos!</h4>
-@foreach(var vlrs in Model)
+
+@if (ViewBag.valortrab != null)
 {
-    <p id="@vlrs.Idpac" class='caught' hidden></p>
-    <p>@vlrs.Destino</p>
-    <p>@vlrs.Tipopac</p>
-    <p>@vlrs.Valor</p>
+    <div id="conftabs">
+        <h4>Porfavor, olhe se os dados da sua viagem desejada estão corretos!</h4>
+        @foreach (var vlrs in Model)
+        {
+            <p id="@vlrs.Idpac" class='caught' hidden></p>
+            <p>@vlrs.Destino</p>
+        }
+        <p>Trabalho</p>
+        <p id="trab">@ViewBag.Valortrab</p>
+        <button id="cont2">Continuar!</button>
+    </div>
+}
+else
+{
+    <h4>Porfavor, olhe se os dados da sua viagem desejada estão corretos!</h4>
+    foreach (var vlrs in Model)
+    {
+        <p id="@vlrs.Idpac" class='caught' hidden></p>
+        <p>@vlrs.Destino</p>
+        <p>@vlrs.Tipopac</p>
+        <p>@vlrs.Valor</p>
+    }
+    <button id="cont1">Continuar!</button>
 }
 
-<button id="cont1">Continuar!</button>
 
 
 <script>
     $(function () {
         $("#cont1").on("click", function () {
             var idpac = $(".caught").attr("id");
-            $.post("Orcamento/index2", { id : idpac }, function (data) {
+            $.post("Orcamento/index2", { id: idpac }, function (data) {
+                $("body").html(data);
+            });
+        });
+        $("#cont2").on("click", function () {
+            var idpac = $(".caught").attr("id");
+            var trabs = $("#trab").text();
+            console.log(trabs);
+            $.post("Orcamento/index2", { id: idpac, trab : trabs }, function (data) {
                 $("body").html(data);
             });
         });

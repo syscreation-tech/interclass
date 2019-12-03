@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "SemAcesso";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    var conf = confirm("[ERROR]Caro usuario, você não pode efetuar um orçamento sem efetuar um loguin. Porfavor efetue-o!");
+    if (conf) {
+        myFunction();
+    }
+function myFunction() {
+    window.location.href("localhost:62184/")
+}
+</script>

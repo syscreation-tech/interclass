@@ -1,25 +1,29 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index3";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h4>Selecione a data que voce deseja vir fazer a entrevista e concluir o planejamento da sua viagem:</h4>
-<input type="text" name="agenda" id="dtagenda" />
+  <input type="date" name="agenda" id="dtagenda" runat="server"/>
 <button id="end">Concluir</button>
+@*Html.ActionLink("Gerar", "Orcamento", new { id = ViewBag.idpac, idseg = ViewBag.idseg}, new { Type = "button" });*@
 <i id="@ViewBag.idpac" class="idpac" hidden></i>
 <i id="@ViewBag.idseg" class="idseg" hidden></i>
+<i id="@ViewBag.vlrtrab" class="idtrab" hidden></i>
+
 <script>
     $(function () {
         $("#end").on("click", function () {
-            var valordt = $("#dtagenda").val();
-            var idpacote = $(".idpac").attr("id");
-            var idseguro = $(".idseg").attr("id");
-            $.post("Orcamento/Gerar", { dt: valordt, idpac: idpacote, idseg: idseguro }, function (pong) {
-                $("body").html(pong);
-
+            var data = $("#dtagenda").val();
+            var idpac = $(".idpac").attr("id");
+            var idseg = $(".idseg").attr("id");
+            var idtrab = $(".idtrab").attr("id");
+            $.post("Orcamento/Teste", {dt : data, idpacote : idpac, idseguro : idseg, vlrtrab : idtrab}, function (data) {
+                $("body").html(data);
             });
         });
     });
+
+
 </script>
 

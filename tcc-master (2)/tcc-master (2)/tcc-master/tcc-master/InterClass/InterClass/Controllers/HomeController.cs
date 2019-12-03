@@ -32,7 +32,7 @@ namespace InterClass.Controllers
                 }
                 else
                 {
-                    return RedirectToAction("Index", "Usuario");
+                    return RedirectToAction("Index", "Home");
                 }
             }
             return View();
@@ -45,6 +45,10 @@ namespace InterClass.Controllers
         {
             Usuario p = new Usuario();
             return View(p);
+        }
+        public ActionResult SemAcesso()
+        {
+            return View();
         }
 
     }

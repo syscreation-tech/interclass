@@ -56,3 +56,24 @@
   });
 
 })(jQuery); // End of use strict
+
+//cont ulSquares = document.querySelector("ul.square");
+//for (let i = 0; i< 11; i++) {
+//    const li = document.createElement("li ")
+//    const size = (Math.random(). (from  120 - 10) + 10)
+//    li.style.width = '-{size}'px;
+//    li.style.height = '-{size}'px;
+//    li.style.botoom = '-{size}'px;
+
+//    li.style.width =  ';
+//    ulSquares.appendChild(li);
+
+//}
+
+const btnLogin = document.querySelector('.btn-login');
+const form = document.querySelector("form");
+
+btnLogin.addEventListener("click", event => {
+    event.preventDefault();
+    form.classList.add("form-hide");
+}); 

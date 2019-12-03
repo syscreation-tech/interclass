@@ -4,11 +4,10 @@
 }
 <link href="~/css/interclass.css" src="stylesheet" />
 @{
-    var dubai = ViewBag.dublin;
-    var valor = ViewBag.valor;
+    string valor = ViewBag.valor;
     if (valor == "4")
     {
-
+        var dubai = ViewBag.dublin;
         <section id="pacote">
             <div class="container-fluid p-0">
                 <h2 class="text-center mt-0">Dublin</h2>
@@ -16,13 +15,140 @@
                 <div class="inline">
                     <div>
                         <h3 id="estudante">Estudante</h3>
-                        @Html.ActionLink("Orçar", "Index", "Orcamento", new { idpasspar = dubai }, null)
+                        <p><strong>Cidade:</strong>Dublin</p>
+                        <p><strong>Curso:</strong>Inglês</p>
+                        <p><strong>Duração:</strong>25 Semanas</p>
+                        <p><strong>Acomodação:</strong>Não Incluída</p>
+                        <p><strong>Passagem:</strong>Não Incluída</p>
+                        <div>
+                            <h3><strong>Valor:</strong>24x R$ @ViewBag.valorviagem</h3>
+                        </div>
+                        @Html.ActionLink("Orçar", "Index", "Orcamento", new { idpasspar = dubai, tipo = "estudante" }, null)
                     </div>
-
+                    <div>
+                        <h3 id="trabalho">Trabalhador</h3>
+                        <p><strong>Cidade:</strong>Dublin</p>
+                        <p><strong>Nível de inglês recomendado:</strong>do básico ao avançado</p>
+                        <p><strong>Duração:</strong>25 Semanas</p>
+                        <p><strong>Idade mínima:</strong>18 anos</p>
+                        <p><strong>Média salarial:</strong>€ 10,00 por hora</p>
+                        <div>
+                            <h3><strong>Valor a vista:</strong>24x R$ 9.648,00</h3>
+                        </div>
+                        @Html.ActionLink("Orçar", "Index", "Orcamento", new { idpasspar = dubai, preco = 9648 }, null)
+                    </div>
                 </div>
             </div>
         </section>
 
+    }
+    else if (valor == "3")
+    {
+        var sidney = ViewBag.sidney;
+        <section id="pacote">
+            <div class="container-fluid p-0">
+                <h2 class="text-center mt-0">Sidney</h2>
+                <hr class="divider my-4">
+                <div class="inline">
+                    <div>
+                        <h3 id="estudante">Estudante</h3>
+                        <p><strong>Cidade:</strong>Sidney</p>
+                        <p><strong>Curso:</strong>Inglês</p>
+                        <p><strong>Duração:</strong>25 Semanas</p>
+                        <p><strong>Acomodação:</strong>Não Incluída</p>
+                        <p><strong>Passagem:</strong>Não Incluída</p>
+                        <div>
+                            <h3><strong>Valor:</strong>24x R$ @ViewBag.valorviagem</h3>
+                        </div>
+                        @Html.ActionLink("Orçar", "Index", "Orcamento", new { idpasspar = sidney, tipo = "estudante" }, null)
+                    </div>
+                    <div>
+                        <h3 id="trabalho">Trabalhador</h3>
+                        <p><strong>Cidade:</strong>Sidney</p>
+                        <p><strong>Nível de inglês recomendado:</strong>do básico ao avançado</p>
+                        <p><strong>Duração:</strong>25 Semanas</p>
+                        <p><strong>Idade mínima:</strong>18 anos</p>
+                        <p><strong>Média salarial:</strong>€ 10,00 por hora</p>
+                        <div>
+                            <h3><strong>Valor a vista:</strong>24x R$ 9.648,00</h3>
+                        </div>
+                        @Html.ActionLink("Orçar", "Index", "Orcamento", new { idpasspar = sidney, preco = 9648 }, null)
+                    </div>
+                </div>
+            </div>
+        </section>
+    }
+    else if (valor == "2")
+    {
+        var toronto = ViewBag.toronto;
+        <section id="pacote">
+            <div class="container-fluid p-0">
+                <h2 class="text-center mt-0">Toronto</h2>
+                <hr class="divider my-4">
+                <div class="inline">
+                    <div>
+                        <h3 id="estudante">Estudante</h3>
+                        <p><strong>Cidade:</strong>Sidney</p>
+                        <p><strong>Curso:</strong>Inglês</p>
+                        <p><strong>Duração:</strong>25 Semanas</p>
+                        <p><strong>Acomodação:</strong>Não Incluída</p>
+                        <p><strong>Passagem:</strong>Não Incluída</p>
+                        <div>
+                            <h3><strong>Valor:</strong>24x R$ @ViewBag.valorviagem</h3>
+                        </div>
+                        @Html.ActionLink("Orçar", "Index", "Orcamento", new { idpasspar = toronto, tipo = "estudante" }, null)
+                    </div>
+                    <div>
+                        <h3 id="trabalho">Trabalhador</h3>
+                        <p><strong>Cidade:</strong>Sidney</p>
+                        <p><strong>Nível de inglês recomendado:</strong>do básico ao avançado</p>
+                        <p><strong>Duração:</strong>25 Semanas</p>
+                        <p><strong>Idade mínima:</strong>18 anos</p>
+                        <p><strong>Média salarial:</strong>€ 10,00 por hora</p>
+                        <div>
+                            <h3><strong>Valor a vista:</strong>24x R$ 9.648,00</h3>
+                        </div>
+                        @Html.ActionLink("Orçar", "Index", "Orcamento", new { idpasspar = toronto, preco = 9648 }, null)
+                    </div>
+                </div>
+            </div>
+        </section>
+    }
+    else if (valor == "1")
+    {
+        var nw = ViewBag.nw;
+        <section id="pacote">
+            <div class="container-fluid p-0">
+                <h2 class="text-center mt-0">New York</h2>
+                <hr class="divider my-4">
+                <div class="inline">
+                    <div>
+                        <h3 id="estudante">Estudante</h3>
+                        <p><strong>Cidade:</strong>Sidney</p>
+                        <p><strong>Curso:</strong>Inglês</p>
+                        <p><strong>Duração:</strong>25 Semanas</p>
+                        <p><strong>Acomodação:</strong>Não Incluída</p>
+                        <p><strong>Passagem:</strong>Não Incluída</p>
+                        <div>
+                            <h3><strong>Valor:</strong>24x R$ @ViewBag.valorviagem</h3>
+                        </div>
+                        @Html.ActionLink("Orçar", "Index", "Orcamento", new { idpasspar = nw, tipo = "estudante" }, null)
+                    </div>
+                    <div>
+                        <h3 id="trabalho">Trabalhador</h3>
+                        <p><strong>Cidade:</strong>Sidney</p>
+                        <p><strong>Nível de inglês recomendado:</strong>do básico ao avançado</p>
+                        <p><strong>Duração:</strong>25 Semanas</p>
+                        <p><strong>Idade mínima:</strong>18 anos</p>
+                        <p><strong>Média salarial:</strong>€ 10,00 por hora</p>
+                        <div>
+                            <h3><strong>Valor a vista:</strong>24x R$ 9.648,00</h3>
+                        </div>
+                        @Html.ActionLink("Orçar", "Index", "Orcamento", new { idpasspar = nw, preco = 9648 }, null)
+                    </div>
+                </div>
+            </div>
+        </section>
     }
 
 }
